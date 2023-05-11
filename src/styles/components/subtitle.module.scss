@@ -1,0 +1,11 @@
+@use "../base/fonts";
+@use "../abstracts/variable" as var;
+
+$font-size: 3.3rem;
+
+.subtitleStyle {
+  font-family: "montserrat-bold";
+  font-size: $font-size;
+  text-align: center;
+  color: var.$secondary;
+}
