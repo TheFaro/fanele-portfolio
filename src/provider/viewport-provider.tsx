@@ -3,8 +3,13 @@ import * as React from "react";
 const viewportContext = React.createContext({});
 
 const ViewportProvider = ({ children }: { children: any }) => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
+  const hasWindow = typeof window !== "undefined";
+  const [width, setWidth] = React.useState(
+    hasWindow ? window.innerWidth : null
+  );
+  const [height, setHeight] = React.useState(
+    hasWindow ? window.innerHeight : null
+  );
 
   const handleWindowSize = () => {
     setWidth(window.innerWidth);
