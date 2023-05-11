@@ -24,7 +24,6 @@ const Header = () => (
         <StaticImage src="../../assets/arrow_down_3.png" alt="downward arrow" />
       </div>
     </div>
-    j
   </div>
 );
 
