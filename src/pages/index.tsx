@@ -1,14 +1,13 @@
 import * as React from "react";
-import Header from "../components/header/header";
-import AboutMe from "../components/about-me/about-me";
-// import { container } from "../styles/index.module.css";
+import DesktopView from "../components/desktop-component/desktop-view";
+import ViewportProvider, { useViewport } from "../provider/viewport-provider";
+import AppComponent from "../components/index/index-component";
 
 const IndexPage = () => {
   return (
-    <div>
-      <Header></Header>
-      <AboutMe></AboutMe>
-    </div>
+    <ViewportProvider>
+      <AppComponent />
+    </ViewportProvider>
   );
 };
 
