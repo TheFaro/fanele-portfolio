@@ -11,7 +11,9 @@ import {
   mobileContainer,
   mobile_container_wrapper,
   mobileHeading,
+  mobileSkills,
   mobileAuthorName,
+  mobileMoreAboutMe,
 } from "../../styles/components/mobile.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -24,8 +26,10 @@ const Header = ({ mobileView }: { mobileView: boolean }) => (
       <div className={mobileView ? mobileAuthorName : authorName}>
         <span>I'm Fanelesibonge Malaza.</span>
       </div>
-      <div className={skills}>Full Stack Software Developer</div>
-      <div className={moreAboutMe}>
+      <div className={mobileView ? mobileSkills : skills}>
+        Full Stack Software Developer
+      </div>
+      <div className={mobileView ? mobileMoreAboutMe : moreAboutMe}>
         MORE ABOUT ME{" "}
         <StaticImage src="../../assets/arrow_down_3.png" alt="downward arrow" />
       </div>
