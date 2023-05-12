@@ -7,11 +7,15 @@ import {
   skills,
   moreAboutMe,
 } from "../../styles/components/header.module.scss";
+import {
+  mobileContainer,
+  mobile_container_wrapper,
+} from "../../styles/components/mobile.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
-const Header = () => (
-  <div className={container}>
-    <div className={container_wrapper}>
+const Header = ({ mobileView }: { mobileView: boolean }) => (
+  <div className={mobileView ? mobileContainer : container}>
+    <div className={mobileView ? mobile_container_wrapper : container_wrapper}>
       <div className={heading}>
         <span>HELLO, WORLD</span>
       </div>
