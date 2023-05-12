@@ -10,16 +10,18 @@ import {
 import {
   mobileContainer,
   mobile_container_wrapper,
+  mobileHeading,
+  mobileAuthorName,
 } from "../../styles/components/mobile.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Header = ({ mobileView }: { mobileView: boolean }) => (
   <div className={mobileView ? mobileContainer : container}>
     <div className={mobileView ? mobile_container_wrapper : container_wrapper}>
-      <div className={heading}>
+      <div className={mobileView ? mobileHeading : heading}>
         <span>HELLO, WORLD</span>
       </div>
-      <div className={authorName}>
+      <div className={mobileView ? mobileAuthorName : authorName}>
         <span>I'm Fanelesibonge Malaza.</span>
       </div>
       <div className={skills}>Full Stack Software Developer</div>
