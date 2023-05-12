@@ -19,9 +19,9 @@ import {
 import { StaticImage } from "gatsby-plugin-image";
 import SubSubTitle from "../fonts/sub-sub-title";
 
-const AboutMe = ({ mobileView }: { mobileView: boolean }) => {
+const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
   return (
-    <div className={mobileView ? mobileWrapper : wrapper}>
+    <div id={id} className={mobileView ? mobileWrapper : wrapper}>
       <Title title="ABOUT ME" mobileView={mobileView}></Title>
       <SubTitle
         mobileView={mobileView}

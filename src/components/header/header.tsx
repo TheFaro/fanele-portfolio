@@ -6,6 +6,7 @@ import {
   authorName,
   skills,
   moreAboutMe,
+  linkStyle,
 } from "../../styles/components/header.module.scss";
 import {
   mobileContainer,
@@ -16,6 +17,7 @@ import {
   mobileMoreAboutMe,
 } from "../../styles/components/mobile.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const Header = ({ mobileView }: { mobileView: boolean }) => (
   <div className={mobileView ? mobileContainer : container}>
@@ -30,8 +32,13 @@ const Header = ({ mobileView }: { mobileView: boolean }) => (
         Full Stack Software Developer
       </div>
       <div className={mobileView ? mobileMoreAboutMe : moreAboutMe}>
-        MORE ABOUT ME{" "}
-        <StaticImage src="../../assets/arrow_down_3.png" alt="downward arrow" />
+        <Link className={linkStyle} to="/#about">
+          MORE ABOUT ME{" "}
+          <StaticImage
+            src="../../assets/arrow_down_3.png"
+            alt="downward arrow"
+          />
+        </Link>
       </div>
     </div>
   </div>

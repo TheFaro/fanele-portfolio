@@ -5,8 +5,8 @@ import AboutMe from "../about-me/about-me";
 const MobileView = () => {
   return (
     <div>
-      <Header mobileView={true}></Header>
-      <AboutMe mobileView={true}></AboutMe>
+      <Header aboutId={"about"} mobileView={true}></Header>
+      <AboutMe id="about" mobileView={true}></AboutMe>
     </div>
   );
 };
