@@ -12,6 +12,9 @@ import {
   mobileWrapper,
   mobileHeroImage,
   mobileAboutWrapper,
+  mobileAboutTextWrapper,
+  mobileTextStyle,
+  mobileTextTitleStyle,
 } from "../../styles/components/about-me.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import SubSubTitle from "../fonts/sub-sub-title";
@@ -33,7 +36,7 @@ const AboutMe = ({ mobileView }: { mobileView: boolean }) => {
             alt="Fanelesibonge sitting on a chair looking professional"
           />
         </div>
-        <div className={aboutTextWrapper}>
+        <div className={mobileView ? mobileAboutTextWrapper : aboutTextWrapper}>
           <p>
             Lorem ipsum Exercitation culpa qui dolor consequat exercitation
             fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure
@@ -42,27 +45,52 @@ const AboutMe = ({ mobileView }: { mobileView: boolean }) => {
           </p>
 
           <div>
-            <SubSubTitle subsubtitle="PROFILE"></SubSubTitle>
+            <SubSubTitle
+              mobileView={mobileView}
+              subsubtitle="PROFILE"
+            ></SubSubTitle>
             <div className={profileItemWrapper}>
-              <span className={textTitleStyle}>FULLNAME:</span>
-              <span className={textStyle}>Fanelesibonge Phiwokuhle Malaza</span>
+              <span
+                className={mobileView ? mobileTextTitleStyle : textTitleStyle}
+              >
+                FULLNAME:
+              </span>
+              <span className={mobileView ? mobileTextStyle : textStyle}>
+                Fanelesibonge Phiwokuhle Malaza
+              </span>
             </div>
             <br />
             <div className={profileItemWrapper}>
-              <span className={textTitleStyle}>BIRTH DATE:</span>
-              <span className={textStyle}>July 19, 1996</span>
+              <span
+                className={mobileView ? mobileTextTitleStyle : textTitleStyle}
+              >
+                BIRTH DATE:
+              </span>
+              <span className={mobileView ? mobileTextStyle : textStyle}>
+                July 19, 1996
+              </span>
             </div>
             <br />
             <div className={profileItemWrapper}>
-              <span className={textTitleStyle}>JOB:</span>
-              <span className={textStyle}>
+              <span
+                className={mobileView ? mobileTextTitleStyle : textTitleStyle}
+              >
+                JOB:
+              </span>
+              <span className={mobileView ? mobileTextStyle : textStyle}>
                 Freelancer, FullStack Developer (Frontend & Backend)
               </span>
             </div>
             <br />
             <div className={profileItemWrapper}>
-              <span className={textTitleStyle}>EMAIL:</span>
-              <span className={textStyle}>malazafanelesibonge@gmail.com</span>
+              <span
+                className={mobileView ? mobileTextTitleStyle : textTitleStyle}
+              >
+                EMAIL:
+              </span>
+              <span className={mobileView ? mobileTextStyle : textStyle}>
+                malazafanelesibonge@gmail.com
+              </span>
             </div>
           </div>
         </div>
