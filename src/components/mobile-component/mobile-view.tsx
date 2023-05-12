@@ -6,7 +6,7 @@ const MobileView = () => {
   return (
     <div>
       <Header mobileView={true}></Header>
-      <AboutMe></AboutMe>
+      <AboutMe mobileView={true}></AboutMe>
     </div>
   );
 };

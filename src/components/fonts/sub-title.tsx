@@ -1,9 +1,18 @@
 import * as React from "react";
-import { subtitleStyle } from "../../styles/components/subtitle.module.scss";
+import {
+  subtitleStyle,
+  mobileSubtitleStyle,
+} from "../../styles/components/subtitle.module.scss";
 
-const SubTitle = ({ subtitle }: { subtitle: string }) => {
+const SubTitle = ({
+  subtitle,
+  mobileView,
+}: {
+  mobileView: boolean;
+  subtitle: string;
+}) => {
   return (
-    <div className={subtitleStyle}>
+    <div className={mobileView ? mobileSubtitleStyle : subtitleStyle}>
       <span>{subtitle}</span>
     </div>
   );

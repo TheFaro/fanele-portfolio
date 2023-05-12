@@ -9,20 +9,26 @@ import {
   textStyle,
   profileItemWrapper,
   wrapper,
+  mobileWrapper,
+  mobileHeroImage,
+  mobileAboutWrapper,
 } from "../../styles/components/about-me.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import SubSubTitle from "../fonts/sub-sub-title";
 
-const AboutMe = () => {
+const AboutMe = ({ mobileView }: { mobileView: boolean }) => {
   return (
-    <div className={wrapper}>
-      <Title title="ABOUT ME"></Title>
-      <SubTitle subtitle="Let me introduce myself."></SubTitle>
+    <div className={mobileView ? mobileWrapper : wrapper}>
+      <Title title="ABOUT ME" mobileView={mobileView}></Title>
+      <SubTitle
+        mobileView={mobileView}
+        subtitle="Let me introduce myself."
+      ></SubTitle>
 
-      <div className={aboutWrapper}>
+      <div className={mobileView ? mobileAboutWrapper : aboutWrapper}>
         <div>
           <StaticImage
-            className={heroImage}
+            className={mobileView ? mobileHeroImage : heroImage}
             src="../../assets/background_1.jpg"
             alt="Fanelesibonge sitting on a chair looking professional"
           />

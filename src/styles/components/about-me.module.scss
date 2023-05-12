@@ -15,6 +15,13 @@ $font-family: "montserrat";
   top: 42px;
 }
 
+.mobileHeroImage {
+  border-radius: 50%;
+  margin: 25px 0;
+  position: relative;
+  top: 42px;
+}
+
 .aboutTextWrapper {
   width: 60%;
   font-family: $font-family;
@@ -25,7 +32,7 @@ $font-family: "montserrat";
 .aboutWrapper {
   display: flex;
   // background-color: grey;
-  width: 70%;
+  width: 100%;
   height: auto;
   margin: auto;
 }
@@ -44,4 +51,17 @@ $font-family: "montserrat";
 .profileItemWrapper {
   display: flex;
   flex-direction: column;
+}
+
+// mobile styles
+.mobileWrapper {
+  margin: auto;
+  text-align: center;
+}
+
+.mobileAboutWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  // background-color: blue;
 }
