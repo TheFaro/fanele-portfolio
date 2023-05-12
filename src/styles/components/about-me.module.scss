@@ -1,6 +1,7 @@
 @use "../base/fonts";
 
 $font-family: "montserrat";
+$buttons-color: #313131;
 
 .wrapper {
   padding: 30px;
@@ -44,6 +45,21 @@ $font-family: "montserrat";
 .profileItemWrapper {
   display: flex;
   flex-direction: column;
+}
+
+.hireMeButton {
+  font-family: "montserrat-bold";
+  color: $buttons-color;
+  border: 2px solid $buttons-color;
+  padding: 24px;
+  width: 25%;
+}
+
+.buttonsContainer {
+  background-color: yellow;
+  // width: 40%;
+  margin: auto;
+  text-align: center;
 }
 
 // mobile styles

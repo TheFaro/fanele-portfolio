@@ -3,7 +3,6 @@ import {
   titleStyle,
   mobileTitleStyle,
 } from "../../styles/components/title.module.scss";
-import { breakpoint, useViewport } from "../../provider/viewport-provider";
 
 const Title = ({
   title,
@@ -12,9 +11,6 @@ const Title = ({
   title: string;
   mobileView: boolean;
 }) => {
-  const { width } = useViewport();
-  const brkpoint = breakpoint;
-  console.log(`this is mobile view value: ${width}`);
   return (
     <div className={mobileView ? mobileTitleStyle : titleStyle}>
       <span>{title}</span>

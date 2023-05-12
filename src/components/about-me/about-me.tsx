@@ -19,6 +19,7 @@ import {
   mobileHireMeButton,
   downloadCVButton,
   mobileDownloadCVButton,
+  buttonsContainer,
 } from "../../styles/components/about-me.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import SubSubTitle from "../fonts/sub-sub-title";
@@ -99,7 +100,7 @@ const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={buttonsContainer}>
         <div className={mobileView ? mobileHireMeButton : hireMeButton}>
           Hire Me
         </div>

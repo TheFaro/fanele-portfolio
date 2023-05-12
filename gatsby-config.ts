@@ -24,6 +24,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
+    "gatsby-plugin-breakpoints",
   ],
 };
 
