@@ -33,6 +33,6 @@ export const useViewport = () => {
   return { width, height };
 };
 
-export const breakpoint = 1080;
+export const breakpoint = 1200;
 
 export default ViewportProvider;
