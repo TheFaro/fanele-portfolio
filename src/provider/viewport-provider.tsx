@@ -30,9 +30,10 @@ const ViewportProvider = ({ children }: { children: any }) => {
 
 export const useViewport = () => {
   const { width, height } = React.useContext(viewportContext);
+  console.log(`This is width: ${width}, and height ${height}`);
   return { width, height };
 };
 
-export const breakpoint = 1000;
+export const breakpoint = 896;
 
 export default ViewportProvider;

@@ -5,12 +5,11 @@ import MobileView from "../mobile-component/mobile-view";
 
 const AppComponent = () => {
   const { width } = useViewport();
-  const brkpoint = breakpoint;
-  console.log(width);
-  return width < brkpoint ? (
-    <MobileView></MobileView>
-  ) : (
+  const brkpoint = 869;
+  return width > brkpoint ? (
     <DesktopView></DesktopView>
+  ) : (
+    <MobileView></MobileView>
   );
 };
 

@@ -5,8 +5,8 @@ import AboutMe from "../about-me/about-me";
 const DesktopView = () => {
   return (
     <div>
-      <Header></Header>
-      <AboutMe></AboutMe>
+      <Header mobileView={false}></Header>
+      <AboutMe id="about" mobileView={false}></AboutMe>
     </div>
   );
 };
