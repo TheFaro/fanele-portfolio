@@ -102,11 +102,11 @@ const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
       </div>
       <div className={buttonsContainer}>
         <div className={mobileView ? mobileHireMeButton : hireMeButton}>
-          Hire Me
+          HIRE ME
         </div>
 
         <div className={mobileView ? mobileDownloadCVButton : downloadCVButton}>
-          Download CV
+          DOWNLOAD CV
         </div>
       </div>
     </div>

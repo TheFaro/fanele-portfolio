@@ -51,15 +51,33 @@ $buttons-color: #313131;
   font-family: "montserrat-bold";
   color: $buttons-color;
   border: 2px solid $buttons-color;
-  padding: 24px;
-  width: 25%;
+  padding: 16px;
+  width: 40%;
+}
+
+.hireMeButton:hover {
+  cursor: pointer;
+}
+
+.downloadCVButton {
+  font-family: "montserrat-bold";
+  background-color: $buttons-color;
+  color: white;
+  padding: 16px;
+  width: 40%;
+}
+
+.downloadCVButton:hover {
+  cursor: pointer;
 }
 
 .buttonsContainer {
-  background-color: yellow;
-  // width: 40%;
+  // background-color: yellow;
+  width: 40%;
   margin: auto;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 // mobile styles

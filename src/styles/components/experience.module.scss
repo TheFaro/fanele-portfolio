@@ -1,0 +1,157 @@
+@use "../abstracts/variable" as var;
+$font-family: "montserrat";
+
+body {
+  font-family: $font-family;
+}
+.experienceWrapper {
+  // background-color: #eee;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.job_title {
+  width: 40%;
+  // height: 0
+  // background-color: yellow;
+  text-align: right;
+  padding: 48px;
+}
+
+.job_icon {
+  // width: 15%;
+  // background-color: blue;
+  display: flex;
+  flex-direction: column;
+  padding: 42px;
+}
+
+.icon_style_wrapper {
+  width: 91px;
+  height: 91px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 11px;
+  border-radius: 51%;
+  box-sizing: border-box;
+}
+
+.vertical_line {
+  width: 7px;
+  height: 120px;
+  background-color: white;
+  margin: auto;
+}
+
+.title_text {
+  font-family: "montserrat-bold";
+  color: var.$darkColor;
+  font-size: 2.1rem;
+}
+
+.duration_text {
+  color: grey;
+  font-size: 1.3rem;
+  font-family: "montserrat";
+}
+
+.work_wrapper {
+  padding: 48px;
+  // background-color: pink;
+  text-align: left;
+  width: 50%;
+}
+
+.company_name {
+  font-family: "montserrat";
+  color: var.$darkColor;
+  font-size: 2.2rem;
+}
+
+.company_desc_separator {
+  height: 4px;
+  width: 140px;
+  background-color: grey;
+  margin: 12px 0;
+}
+
+.job_description {
+  color: grey;
+  font-size: 1.3rem;
+  font-family: "montserrat";
+}
+
+.buttonStyle {
+  display: inline-block;
+  padding: 12px;
+  border: 1px solid var.$darkColor;
+  margin: 12px 0;
+  border-radius: 7px;
+}
+
+.buttonStyle:hover {
+  background-color: var.$primary;
+  border: 1px solid var.$darkColor;
+  cursor: pointer;
+}
+
+// mobile styles
+.mobileExperienceWrapper {
+  background-color: #eee;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.mobileJob_title {
+  width: 40%;
+  // height: 0
+  // background-color: yellow;
+  text-align: right;
+  padding: 24px;
+}
+
+.mobileVertical_line {
+  width: 7px;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+}
+
+.mobileTitle_text {
+  font-family: "montserrat-bold";
+  color: var.$darkColor;
+  font-size: 1.1rem;
+}
+
+.mobileDuration_text {
+  color: grey;
+  font-size: 0.7rem;
+  font-family: "montserrat";
+}
+
+.mobileCompany_name {
+  font-family: "montserrat";
+  color: var.$darkColor;
+  font-size: 1.2rem;
+}
+
+.mobileCompany_desc_separator {
+  height: 4px;
+  width: 100px;
+  background-color: grey;
+  margin: 12px 0;
+}
+
+.mobileJob_description {
+  color: grey;
+  font-size: 0.7rem;
+  font-family: "montserrat";
+}

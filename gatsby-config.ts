@@ -17,8 +17,15 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: `resume`,
+        path: `${__dirname}/src/components/resume/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: `blog`,
-        path: `${__dirname}/src/blog`,
+        path: `${__dirname}/src/blog/`,
       },
     },
     "gatsby-plugin-mdx",
