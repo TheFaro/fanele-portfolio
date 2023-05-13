@@ -123,3 +123,37 @@ $buttons-color: #313131;
   font-family: $font-family;
   font-size: 1.2rem;
 }
+
+.mobileHireMeButton {
+  font-family: "montserrat-bold";
+  color: $buttons-color;
+  border: 2px solid $buttons-color;
+  padding: 16px;
+  // width: 40%;
+}
+
+.mobileHireMeButton:hover {
+  cursor: pointer;
+}
+
+.mobileDownloadCVButton {
+  font-family: "montserrat-bold";
+  background-color: $buttons-color;
+  color: white;
+  margin: 12px 0;
+  padding: 16px;
+  // width: 10%;
+}
+
+.mobileDownloadCVButton:hover {
+  cursor: pointer;
+}
+
+.mobileButtonsContainer {
+  // background-color: yellow;
+  margin: 24px auto;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+}

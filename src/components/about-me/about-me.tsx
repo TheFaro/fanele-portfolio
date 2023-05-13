@@ -20,9 +20,11 @@ import {
   downloadCVButton,
   mobileDownloadCVButton,
   buttonsContainer,
+  mobileButtonsContainer,
 } from "../../styles/components/about-me.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import SubSubTitle from "../fonts/sub-sub-title";
+import resume from "../../assets/Fanelesibonge Malaza Resume.pdf";
 
 const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
   return (
@@ -100,14 +102,18 @@ const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
           </div>
         </div>
       </div>
-      <div className={buttonsContainer}>
+      <div className={mobileView ? mobileButtonsContainer : buttonsContainer}>
         <div className={mobileView ? mobileHireMeButton : hireMeButton}>
           HIRE ME
         </div>
 
-        <div className={mobileView ? mobileDownloadCVButton : downloadCVButton}>
-          DOWNLOAD CV
-        </div>
+        <a href={resume} download>
+          <div
+            className={mobileView ? mobileDownloadCVButton : downloadCVButton}
+          >
+            DOWNLOAD CV
+          </div>
+        </a>
       </div>
     </div>
   );
