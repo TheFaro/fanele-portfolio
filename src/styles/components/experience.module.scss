@@ -26,7 +26,7 @@ body {
   // background-color: blue;
   display: flex;
   flex-direction: column;
-  padding: 42px;
+  // padding: 42px;
 }
 
 .icon_style_wrapper {
@@ -102,7 +102,7 @@ body {
 
 // mobile styles
 .mobileExperienceWrapper {
-  background-color: #eee;
+  // background-color: #eee;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -115,14 +115,21 @@ body {
   // height: 0
   // background-color: yellow;
   text-align: right;
-  padding: 24px;
+  padding: 12px;
 }
 
 .mobileVertical_line {
-  width: 7px;
+  width: 3px;
   height: 100%;
   background-color: white;
-  margin: auto;
+  margin: 3px;
+}
+
+.mobileWork_wrapper {
+  padding: 12px;
+  // background-color: pink;
+  text-align: left;
+  width: 60%;
 }
 
 .mobileTitle_text {

@@ -21,6 +21,7 @@ import {
   mobileCompany_name,
   mobileCompany_desc_separator,
   mobileJob_description,
+  mobileWork_wrapper,
 } from "../../styles/components/experience.module.scss";
 
 const ExperienceItem = ({
@@ -53,7 +54,7 @@ const ExperienceItem = ({
       <div className={job_icon}>
         <div className={mobileView ? mobileVertical_line : vertical_line}></div>
       </div>
-      <div className={work_wrapper}>
+      <div className={mobileView ? mobileWork_wrapper : work_wrapper}>
         <div className={mobileView ? mobileCompany_name : company_name}>
           {companyName}
         </div>
