@@ -30,9 +30,9 @@ const ContactView = ({
 
   const onSubmit = (data: any) => {
     console.log(data);
-    const { name, email, subject, message } = data;
+    const { username, email, subject, message } = data;
     const to_send = {
-      name: name,
+      name: username,
       email: email,
       subject: subject,
       message: message,
