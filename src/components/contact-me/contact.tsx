@@ -85,9 +85,9 @@ const ContactView = ({
       </div>
 
       <div className={mobileView ? mobileText : text}>
-        Do you want a website done, an android application or a custom software
-        with clear specifications. Do not hesitate to contact me with the
-        contact info below.
+        If you require a website, an android application, or bespoke software
+        with well-defined specifications, please feel free to get in touch using
+        the contact information provided below.
       </div>
 
       <div
