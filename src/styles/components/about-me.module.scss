@@ -1,4 +1,5 @@
 @use "../base/fonts";
+@use "../abstracts/variable" as var;
 
 $font-family: "montserrat";
 $buttons-color: #313131;
@@ -49,10 +50,11 @@ $buttons-color: #313131;
 
 .hireMeButton {
   font-family: "montserrat-bold";
-  color: $buttons-color;
+  color: var.$darkColor;
   border: 2px solid $buttons-color;
   padding: 16px;
-  width: 40%;
+  width: auto;
+  align-items: center;
 }
 
 .hireMeButton:hover {
@@ -64,7 +66,11 @@ $buttons-color: #313131;
   background-color: $buttons-color;
   color: white;
   padding: 16px;
-  width: 40%;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .downloadCVButton:hover {

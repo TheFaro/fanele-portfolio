@@ -3,6 +3,7 @@ import Header from "../header/header";
 import AboutMe from "../about-me/about-me";
 import ResumeView from "../resume/resume";
 import { graphql } from "gatsby";
+import ContactView from "../contact-me/contact";
 
 const DesktopView = () => {
   return (
@@ -10,6 +11,7 @@ const DesktopView = () => {
       <Header mobileView={false}></Header>
       <AboutMe id="about" mobileView={false}></AboutMe>
       <ResumeView mobileView={false}></ResumeView>
+      <ContactView mobileView={false}></ContactView>
     </div>
   );
 };

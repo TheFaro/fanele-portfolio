@@ -1,0 +1,101 @@
+@use "../abstracts/variable" as var;
+
+.wrapper {
+  background-color: var.$darkColor;
+  padding: 36px 0;
+}
+
+.subtitle {
+  // background-color: #eee;
+  margin-top: 12px;
+}
+
+.text {
+  text-align: center;
+  width: 50%;
+  margin: 12px auto;
+  font-size: 1.6rem;
+  color: #eee;
+}
+
+.mobileText {
+  text-align: center;
+  width: 80%;
+  margin: 12px auto;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.form {
+  text-align: center;
+  align-items: center;
+  background-color: var.$darkColor;
+}
+
+.mobileForm {
+  text-align: center;
+  align-items: center;
+  background-color: var.$darkColor;
+}
+
+input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-family: "montserrat";
+  color: #eee;
+}
+
+input:focus {
+  color: white;
+  border-color: var.$primary;
+}
+
+.input {
+  width: 32%;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  padding: 12px;
+  margin: 16px 0;
+}
+
+.mobileInput {
+  width: 60%;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  padding: 12px;
+  margin: 16px 0;
+}
+
+.error {
+  // background-color: yellow;
+  width: 33%;
+  color: var.$primary;
+  font-family: "montserrat";
+  text-align: left;
+  font-size: 1rem;
+  margin: 7px auto;
+}
+
+.mobileError {
+  // background-color: yellow;
+  width: 83%;
+  color: var.$primary;
+  font-family: "montserrat";
+  text-align: center;
+  font-size: 1rem;
+  margin: 7px auto;
+}
+
+button {
+  margin: 12px;
+  padding: 12px 48px;
+  background-color: var.$primary;
+  color: white;
+  font-family: "montserrat";
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 6px;
+}

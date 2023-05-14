@@ -25,6 +25,7 @@ import {
 import { StaticImage } from "gatsby-plugin-image";
 import SubSubTitle from "../fonts/sub-sub-title";
 import resume from "../../assets/Fanelesibonge Malaza Resume.pdf";
+import { Link } from "gatsby";
 
 const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
   return (
@@ -45,10 +46,30 @@ const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
         </div>
         <div className={mobileView ? mobileAboutTextWrapper : aboutTextWrapper}>
           <p>
-            Lorem ipsum Exercitation culpa qui dolor consequat exercitation
-            fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure
-            sunt id pariatur Duis laboris amet exercitation veniam labore
-            consectetur ea id quis eiusmod.
+            As a youth from Eswatini, I possess an avid eagerness to constantly
+            challenge my intellectual abilities by continuously aqcuiring novel
+            concepts and insights. My passion for problem-solving has led me to
+            engage in diverse professions, where I have created software with
+            varying applications for various stakeholders clients such as
+            finance (
+            <a
+              href="https://play.google.com/store/apps/details?id=com.simplesource.simple_books"
+              target="_blank"
+            >
+              <b>Simple Books</b>
+            </a>
+            ), voting systems (
+            <a href="https://voter.ummo.xyz" target="_blank">
+              <b>SRC Voter</b>
+            </a>
+            ) and location addressing (
+            <a
+              href="https://play.google.com/store/apps/details?id=xyz.ummo.pozi"
+              target="_blank"
+            >
+              <b>Pozi - Digital Addressor</b>
+            </a>
+            )
           </p>
 
           <div>
@@ -103,9 +124,11 @@ const AboutMe = ({ mobileView, id }: { mobileView: boolean; id: string }) => {
         </div>
       </div>
       <div className={mobileView ? mobileButtonsContainer : buttonsContainer}>
-        <div className={mobileView ? mobileHireMeButton : hireMeButton}>
-          HIRE ME
-        </div>
+        <Link to="/#contact">
+          <div className={mobileView ? mobileHireMeButton : hireMeButton}>
+            HIRE ME
+          </div>
+        </Link>
 
         <a href={resume} download>
           <div
