@@ -11,6 +11,7 @@ const handler: Handler = async (
   //   statusCode: 200,
   //   body: JSON.stringify({ message: "Hello World" }),
   // };
+  console.log("I am here now.");
   const data = JSON.parse(event.body!);
   const { email, subject } = data;
 
@@ -22,6 +23,8 @@ const handler: Handler = async (
     })
     .join("<br><br>");
 
+  console.log(typeof body);
+
   const mail_to_send = {
     to: "malazafanelesibonge@gmail.com",
     from: email,
@@ -29,8 +32,17 @@ const handler: Handler = async (
     html: body,
   };
 
+  // console.log(sgMail.);
+
   try {
-    await sgMail.send(mail_to_send);
+    await sgMail
+      .send(mail_to_send)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     return {
       statusCode: 200,

@@ -1,12 +1,12 @@
 @use "../abstracts/variable" as var;
 
 .wrapper {
-  background-color: var.$darkColor;
+  background-color: #575757;
   padding: 36px 0;
 }
 
 .subtitle {
-  // background-color: #eee;
+  // background-color: #181818;
   margin-top: 12px;
 }
 
@@ -98,4 +98,78 @@ button {
   outline: none;
   border: none;
   box-shadow: 2px 2px 6px;
+}
+
+.contactDataWrapper {
+  // background-color: yellow;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mobileContactDataWrapper {
+  // background-color: pink
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contactItem {
+  margin: 12px;
+  // background-color: red;
+  width: 25%;
+  height: auto;
+}
+
+.mobileContactItem {
+  margin: 12px;
+  // background-color: brown;
+}
+
+.mobileIcon {
+  width: 70px;
+  // height: 120px;
+  margin: auto;
+  // background-color: blue;
+  line-height: 40px;
+}
+
+.icon {
+  width: 70px;
+  // height: 120px;
+  margin: auto;
+  // background-color: blue;
+  line-height: 40px;
+}
+
+.contactText {
+  color: #313131;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.mobileContactText {
+  color: #313131;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.infoText {
+  color: #eee;
+  font-weight: lighter;
+  font-family: "montserrat-lighter";
+}
+
+.mobileInfoText {
+  color: #eee;
+  font-family: "montserrat-lighter";
+}
+
+.copyRight {
+  color: #eee;
+  text-align: center;
+  font-family: "montserrat-lighter";
+  margin-top: 24px;
+  font-size: 1.2rem;
 }

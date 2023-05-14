@@ -49,9 +49,12 @@ const ResumeView = ({ mobileView }: { mobileView: boolean }) => {
         mobileView={mobileView}
       ></SubTitle>
       <div className={mobileView ? mobileResume_text : resume_text}>
-        Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing
-        dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur
-        ut in in eu do.
+        EXPERT IN: Web Development (HTML5, CSS3, JS6), Android Apps (Java, Dart,
+        Flutter), Desktop Apps (Python, Java, Flutter), API Development.
+        <br />
+        <br />
+        INTERMEDIATE IN: Nest.Js, Vue.Js, TypeScript, Numerical Analysis,
+        Database Management, Angular, Gatsby, Sass.
       </div>
       <div className={workExperience}>Work Experience</div>
       {data.allMdx.edges.map((edge: any) =>

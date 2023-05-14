@@ -12,8 +12,20 @@ import {
   error,
   mobileError,
   subtitle,
+  contactDataWrapper,
+  mobileContactDataWrapper,
+  contactItem,
+  mobileContactItem,
+  mobileIcon,
+  icon,
+  contactText,
+  mobileContactText,
+  infoText,
+  mobileInfoText,
+  copyRight,
 } from "../../styles/components/contact.module.scss";
 import { useForm } from "react-hook-form";
+import { StaticImage } from "gatsby-plugin-image";
 
 const ContactView = ({
   mobileView,
@@ -39,13 +51,14 @@ const ContactView = ({
     };
 
     try {
-      fetch("/.netlify/functions/sendmail", {
+      fetch("/netlify/functions/sendmail", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(to_send),
+        headers: { "Content-Type": "application/json" },
       }).then((res) => {
         if (!res.ok) {
-          console.log("Error occured.");
+          console.log(res);
           return;
         }
         console.log("Successfully sent");
@@ -72,82 +85,130 @@ const ContactView = ({
       </div>
 
       <div className={mobileView ? mobileText : text}>
-        Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing
-        dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur
-        ut in in eu do.
+        Do you want a website done, an android application or a custom software
+        with clear specifications. Do not hesitate to contact me with the
+        contact info below.
       </div>
 
-      <div className={mobileView ? mobileForm : form}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            <input
-              className={mobileView ? mobileInput : input}
-              id="name"
-              placeholder="Name"
-              type="text"
-              {...register("username", {
-                required: true,
-              })}
-            />
-            {errors.username && (
-              <div className={mobileView ? mobileError : error}>
-                This field is required
-              </div>
-            )}
+      <div
+        className={mobileView ? mobileContactDataWrapper : contactDataWrapper}
+      >
+        <div className={mobileView ? mobileContactItem : contactItem}>
+          <div className={mobileView ? mobileIcon : icon}>
+            <StaticImage src="../../assets/location.png" alt="location icon" />
           </div>
-          <div>
-            <input
-              className={mobileView ? mobileInput : input}
-              id="email"
-              placeholder="Email Address"
-              type="email"
-              {...register("email", {
-                required: true,
-                pattern: {
-                  value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                  message: "Email is not valid.",
-                },
-              })}
-            />
-            {errors.email && errors.email.type === "pattern" && (
-              <div className={mobileView ? mobileError : error}>
-                This field is required
-              </div>
-            )}
+          <div className={mobileView ? mobileContactText : contactText}>
+            WHERE TO FIND ME
           </div>
-          <div>
-            <input
-              className={mobileView ? mobileInput : input}
-              id="subject"
-              placeholder="Subject"
-              type="text"
-              {...register("subject")}
-            />
+          <div className={mobileView ? mobileInfoText : infoText}>
+            Siphocosini
+            <br />
+            Hhohho
+            <br />
+            Eswatini
           </div>
-          <div>
-            <textarea
-              placeholder="Message"
-              id="message"
-              cols={70}
-              rows={20}
-              {...register("message", {
-                required: true,
-              })}
-            ></textarea>
-            {errors.message && (
-              <div className={mobileView ? mobileError : error}>
-                This field is required
-              </div>
-            )}
+        </div>
+        <div className={mobileView ? mobileContactItem : contactItem}>
+          <div className={mobileView ? mobileIcon : icon}>
+            <StaticImage src="../../assets/email.png" alt="email icon" />
           </div>
+          <div className={mobileView ? mobileContactText : contactText}>
+            EMAIL ME AT
+          </div>
+          <div className={mobileView ? mobileInfoText : infoText}>
+            malazafanelesibonge@gmail.com
+          </div>
+        </div>
+        <div className={mobileView ? mobileContactItem : contactItem}>
+          <div className={mobileView ? mobileIcon : icon}>
+            <StaticImage src="../../assets/telephone.png" alt="phone icon" />
+          </div>
+          <div className={mobileView ? mobileContactText : contactText}>
+            CALL ME AT
+          </div>
+          <div className={mobileView ? mobileInfoText : infoText}>
+            Mobile 1: (+268) 7822 1507
+            <br /> Mobile 2: (+268) 7999 0188
+          </div>
+        </div>
+      </div>
 
-          <div>
-            <button type="submit">SUBMIT</button>
-          </div>
-        </form>
+      <div className={copyRight}>
+        &copy; Copyright 2023 | Developed by Fanelesibonge Malaza
       </div>
     </div>
   );
 };
 
 export default ContactView;
+
+// <div className={mobileView ? mobileForm : form}>
+//         <form onSubmit={handleSubmit(onSubmit)}>
+//           <div>
+//             <input
+//               className={mobileView ? mobileInput : input}
+//               id="name"
+//               placeholder="Name"
+//               type="text"
+//               {...register("username", {
+//                 required: true,
+//               })}
+//             />
+//             {errors.username && (
+//               <div className={mobileView ? mobileError : error}>
+//                 This field is required
+//               </div>
+//             )}
+//           </div>
+//           <div>
+//             <input
+//               className={mobileView ? mobileInput : input}
+//               id="email"
+//               placeholder="Email Address"
+//               type="email"
+//               {...register("email", {
+//                 required: true,
+//                 pattern: {
+//                   value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+//                   message: "Email is not valid.",
+//                 },
+//               })}
+//             />
+//             {errors.email && errors.email.type === "pattern" && (
+//               <div className={mobileView ? mobileError : error}>
+//                 This field is required
+//               </div>
+//             )}
+//           </div>
+//           <div>
+//             <input
+//               className={mobileView ? mobileInput : input}
+//               id="subject"
+//               placeholder="Subject"
+//               type="text"
+//               {...register("subject")}
+//             />
+//           </div>
+//           <div>
+//             <textarea
+//               placeholder="Message"
+//               id="message"
+//               cols={70}
+//               rows={20}
+//               {...register("message", {
+//                 required: true,
+//               })}
+//             ></textarea>
+//             {errors.message && (
+//               <div className={mobileView ? mobileError : error}>
+//                 This field is required
+//               </div>
+//             )}
+//           </div>
+//
+//           <div>
+//             <button type="submit">SUBMIT</button>
+//           </div>
+//         </form>
+//       </div>
+//
