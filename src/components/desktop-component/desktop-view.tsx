@@ -11,7 +11,7 @@ const DesktopView = () => {
       <Header mobileView={false}></Header>
       <AboutMe id="about" mobileView={false}></AboutMe>
       <ResumeView mobileView={false}></ResumeView>
-      <ContactView mobileView={false}></ContactView>
+      <ContactView id="contact" mobileView={false}></ContactView>
     </div>
   );
 };
